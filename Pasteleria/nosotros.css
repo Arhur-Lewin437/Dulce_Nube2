@@ -1,0 +1,213 @@
+nav {
+    display: flex;
+    padding: 1.5rem 2.5rem;
+    justify-content: space-between;
+    align-items: center;;
+}
+
+
+nav .logo img {
+    height: 5rem;
+    width: auto;
+}
+
+nav .carrito img {
+    height: 5rem;
+    width: auto;
+}
+
+
+nav ul {
+    display: flex;
+    color: #2B1F1A;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.20rem;
+    font-weight: bold;
+    color: black;
+    transition: 250ms color;
+}
+
+nav li a:hover {
+    color: red;
+}
+
+/* HERO SIMPLE */
+.hero-simple {
+    position: relative;
+    height: 45vh;
+    background-image: url("https://images.unsplash.com/photo-1559622214-f8a9850965bb");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-simple-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-simple h1 {
+    position: relative;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    z-index: 1;
+    text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.servicios {
+    padding: 5rem 2rem;
+    background: #fff;
+}
+
+.servicios-header {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    text-align: center;
+}
+
+.servicios-header span {
+    font-size: .75rem;
+    letter-spacing: 2px;
+    color: #c9a24d;
+    font-weight: 600;
+}
+
+.servicios-header h2 {
+    font-size: 2.5rem;
+    margin: .5rem 0 1rem;
+    color: #2B1F1A;
+}
+
+
+.servicios-header p {
+    font-size: 1rem;
+    color: #6b5e58;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+
+
+.servicios-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.servicio-card {
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    background: #F8F3ED;
+    text-align: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.servicio-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px rgba(0,0,0,0.12);
+}
+
+.servicio-card h3 {
+    color: #865b49;
+    margin-bottom: .8rem;
+    font-size: 1.3rem;
+}
+
+.servicio-card p {
+    font-size: .95rem;
+    color: #2B1F1A;
+    line-height: 1.6;
+}
+
+.final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+    180deg,
+    #FFF8F0 0%,
+    #F6EFE6 50%,
+    #EFE6DA 100%
+);
+
+}
+
+.final .imagen-footer img {
+    height: 5rem;
+    width: auto;
+}
+
+footer .final p .text-footer {
+    font-size: 1rem;
+    justify-content: center;
+}
+
+/* RESPONSIVE */
+
+    @media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    nav .logo img {
+        height: 3.5rem;
+    }
+
+    nav .carrito img {
+        height: 3rem;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.2rem;
+        padding: 1rem 0;
+        border-top: 1px solid #ddd;
+    }
+
+    nav li a {
+        font-size: 1rem;
+    }
+}
+
+
+/* TABLETS AND PHONES */
+@media screen and (max-width: 1023px) {
+    .final {
+        justify-content: center;
+    }
+
+    .imagen-footer {
+        display: none;
+    }
+
+}
+
+
+
+@media (max-width: 900px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-simple h1 {
+        font-size: 2.2rem;
+    }
+}

@@ -1,0 +1,307 @@
+
+nav {
+    display: flex;
+    padding: 1.5rem 2.5rem;
+    justify-content: space-between;
+    align-items: center;;
+}
+
+
+nav .logo img {
+    height: 5rem;
+    width: auto;
+}
+
+nav .carrito img {
+    height: 5rem;
+    width: auto;
+}
+
+
+nav ul {
+    display: flex;
+    color: #2B1F1A;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.20rem;
+    font-weight: bold;
+    color: black;
+    transition: 250ms color;
+}
+
+nav li a:hover {
+    color: var(--color-renn);
+}
+
+
+
+
+.productos {
+  padding: 6rem 2rem;
+}
+
+.productos-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productos-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.productos-header h1 {
+  font-size: 2.5rem;
+  color: #2B1F1A;
+  margin-bottom: 0.5rem;
+}
+
+
+.productos-header p {
+  color: #6b5e58;
+  font-size: 1.1rem;
+}
+
+/* Grid */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+
+.producto-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+  position: relative;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(0,0,0,0.12);
+}
+
+.producto-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 1.2rem;
+}
+
+.producto-card h3 {
+  font-size: 1.4rem;
+  color: #2B1F1A;
+  margin-bottom: .5rem;
+}
+
+.producto-card p {
+  font-size: .95rem;
+  color: #6b5e58;
+  margin-bottom: 1.2rem;
+}
+
+
+.precio {
+  margin-bottom: 1.2rem;
+}
+
+.precio .antes {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: .5rem;
+}
+
+.precio .ahora {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-renn);
+}
+
+.btn {
+  display: inline-block;
+  padding: .7rem 1.6rem;
+  border-radius: 30px;
+  background: var(--color-renn);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .3s ease;
+}
+
+.btn:hover {
+  background: var(--color-renn);
+}
+
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--color-renn);
+  color: white;
+  font-size: .8rem;
+  padding: .4rem .8rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+
+
+.productos-header {
+  position: relative;          
+  width: 100%;
+  height: 18vmin;              
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.productos-header h2 {
+  position: absolute;
+  font-size: 15vmin;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.productos-header h1 {
+  position: absolute;
+  font-size: 15vmin;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+
+.productos-header p {
+  margin-top: 18vmin;
+  font-size: 1.5rem;
+}
+
+.border {
+  color: black;  
+  text-shadow:
+    -1px -1px 0 white, 
+    1px -1px 0 white,
+    -1px  1px 0 white,
+    1px  1px 0 white;  
+}
+
+.wave {
+  color: var(--color-renn);
+  animation: wave 3s ease-in-out infinite;
+}
+
+
+@keyframes wave {
+  0%, 100% {
+    clip-path: polygon(
+      0% 47%, 10% 48%, 33% 54%, 54% 60%,
+      70% 61%, 84% 59%, 100% 52%,
+      100% 100%, 0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%, 15% 65%, 34% 66%, 51% 62%,
+      67% 50%, 84% 45%, 100% 46%,
+      100% 100%, 0% 100%
+    );
+  }
+}
+
+.final {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(
+    180deg,
+    #FFF8F0 0%,
+    #F6EFE6 50%,
+    #EFE6DA 100%
+);
+}
+
+.final .imagen-footer img {
+    height: 5rem;
+    width: auto;
+}
+
+footer .final p .text-footer {
+    font-size: 1rem;
+    justify-content: center;
+}
+
+
+/* TABLETS AND PHONES */
+@media screen and (max-width: 1023px) {
+    .final {
+        justify-content: center;
+    }
+
+    .imagen-footer {
+        display: none;
+    }
+
+    .border .wave {
+      display: none;
+    }
+}
+
+
+/* PHONES */
+@media (max-width: 768px) {
+
+    nav {
+        flex-wrap: wrap;
+        padding: 1rem 1.5rem;
+        position: relative;
+    }
+
+    nav .logo img {
+        height: 3.5rem;
+    }
+
+    nav .carrito img {
+        height: 3rem;
+    }
+
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.2rem;
+        padding: 1rem 0;
+        border-top: 1px solid #ddd;
+    }
+
+    nav li a {
+        font-size: 1rem;
+    }
+
+  .productos-header h2 {
+    display: none;
+  }
+  .productos-header p {
+  margin-top: 18vmin;
+  font-size: 2rem;
+  font-weight: bold;
+}
+}
+
+
